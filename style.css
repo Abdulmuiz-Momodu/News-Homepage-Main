@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu {
+    display: none;
+}
+
+.text {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.text p {
+    font-size: small;
+}
+
+.text p:hover, h5:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-auto-columns: 18.7rem;
+    grid-auto-rows: auto;
+    grid-template: 
+    'image image ABC'
+    'web scroll ABC';
+    gap: 2rem;
+}
+
+.image {
+    grid-area: image;
+    height: 100%;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+}
+
+.web {
+    grid-area: web;
+    display: flex;
+}
+
+.scroll {
+    display: flex;
+    grid-area: scroll;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+button {
+    height: 3rem;
+    width: 8rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+}
+
+button:hover {
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
+.ABC {
+    grid-area: ABC;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    background-color: hsl(240, 100%, 5%);
+    color: #fff;
+}
+
+.abc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 81%;
+}
+
+.Z {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+    gap: .5rem;
+}
+
+.Cc, .Bb {
+    border-top: 1px solid hsl(236, 13%, 42%);
+    height: 33%;
+    display: flex;
+    justify-content: end;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    color: hsl(35, 77%, 62%);
+    font-size: xxx-large;
+}
+
+h3{
+    color: hsl(233, 8%, 79%);
+    font-size: xx-large;
+}
+
+h4 {
+    font-size: 15px;
+}
+
+h5 {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+p {
+    font-size: 11.4px;
+    color: hsl(236, 13%, 42%);
+}
+
+footer {
+    display: flex;
+    height: 7rem;
+    justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    gap: 1rem;
+    width: 18.7rem;
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+@media screen and (max-width: 870px) {
+
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        height: 160vh;
+        gap: 2.5rem;
+        width: 100%;
+    }
+    
+    main {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-auto-columns: auto;
+        grid-template-areas: 
+        'image image'
+        'ABC web'
+        'ABC scroll';
+        height: 80%;
+    }
+
+    .scroll {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .web {
+        align-items: flex-end;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .box {
+        width: 33.33%;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+
+    section {
+        height: 200vh;
+    }
+
+    main {
+        height: 55%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+    }
+
+    .box {
+        height: 8rem;
+        width: 100%;
+    }
+
+    .box img {
+        width: 8rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 615px) {
+
+    main {
+        height: 65%;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    section {
+        height: fit-content;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .abc {
+        height: 20rem;
+    }
+
+    footer {
+        gap: 2rem;
+    }
+    
+}
